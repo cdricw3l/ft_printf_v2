@@ -6,7 +6,7 @@
 /*   By: cdric.b <cdric.b@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/11 23:37:21 by cdric.b           #+#    #+#             */
-/*   Updated: 2026/03/11 23:38:12 by cdric.b          ###   ########.fr       */
+/*   Updated: 2026/03/12 00:07:33 by cdric.b          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@
 
 int		ft_printf(const char *format, ...);
 void	ft_putnbr_base(unsigned int nb, char *base, int fd, int *r);
+void	ft_putptr_base(unsigned long nb, char *base, int fd, int *r);
 void	ft_putstr_fd(char *str, int fd, int *r);
 void	ft_putchar_fd(int c, int fd, int *r);
 size_t	ft_strlen(char *str);

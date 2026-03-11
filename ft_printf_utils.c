@@ -6,7 +6,7 @@
 /*   By: cdric.b <cdric.b@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/11 23:33:19 by cdric.b           #+#    #+#             */
-/*   Updated: 2026/03/11 23:36:56 by cdric.b          ###   ########.fr       */
+/*   Updated: 2026/03/12 00:07:14 by cdric.b          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,19 @@ size_t	ft_strlen(char *str)
 }
 
 void	ft_putnbr_base(unsigned int nb, char *base, int fd, int *r)
+{
+	char	c;
+	size_t	len;
+
+	len = ft_strlen(base);
+	if (nb >= len)
+		ft_putnbr_base(nb / len, base, fd, r);
+	c = base[nb % len];
+	write(1, &c, 1);
+	(*r)++;
+}
+
+void	ft_putptr_base(unsigned long nb, char *base, int fd, int *r)
 {
 	char	c;
 	size_t	len;

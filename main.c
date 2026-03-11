@@ -6,7 +6,7 @@
 /*   By: cdric.b <cdric.b@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/11 21:51:07 by cdric.b           #+#    #+#             */
-/*   Updated: 2026/03/11 23:38:49 by cdric.b          ###   ########.fr       */
+/*   Updated: 2026/03/12 00:13:41 by cdric.b          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,8 +30,7 @@
 int	main(void)
 {
 	int	r;
-
-	assert(printf("hello\n")
-		== ft_printf("hello\n"));
+	r = 0;
+	assert(printf("hello: %p\n", &r) ==ft_printf("hello: %p\n", &r));
 	return (0);
 }
