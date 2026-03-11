@@ -15,10 +15,10 @@ ${NAME}: ${SRCS_OBJS}
 	${AR} ${NAME} ${SRCS_OBJS}
 
 clean:
-	rm -rf ${SRCS_OBJS}
+	rm -rf ${SRCS_OBJS} ${TEST_OBJS}
 
 fclean: clean
-	rm -rf ${NAME}
+	rm -rf ${NAME} test
 
 re: fclean ${NAME}
 
