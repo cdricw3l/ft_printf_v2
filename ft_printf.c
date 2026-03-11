@@ -6,7 +6,7 @@
 /*   By: cdric.b <cdric.b@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/11 23:02:28 by cdric.b           #+#    #+#             */
-/*   Updated: 2026/03/12 00:12:22 by cdric.b          ###   ########.fr       */
+/*   Updated: 2026/03/12 00:14:46 by cdric.b          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,11 +26,11 @@ static void	case_managment(va_list list, char c, int *r)
 		ft_putnbr_base(va_arg(list, unsigned long), BASE_HEX_UP, 1, r);
 	if (c == 'p')
 	{
-		(*r) += write(1, "0x",2);
+		(*r) += write(1, "0x", 2);
 		ft_putptr_base(va_arg(list, unsigned long), BASE_HEX_LOW, 1, r);
 	}
 	if (c == '%')
-		(*r) += write(1, &c,1);
+		(*r) += write(1, &c, 1);
 }
 
 int	ft_printf(const char *format, ...)
