@@ -6,7 +6,7 @@
 /*   By: cdric.b <cdric.b@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/11 21:51:07 by cdric.b           #+#    #+#             */
-/*   Updated: 2026/03/12 00:15:23 by cdric.b          ###   ########.fr       */
+/*   Updated: 2026/04/02 23:13:58 by cdric.b          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,12 +27,20 @@
 
 */
 
-int	main(void)
-{
-	int	r;
 
-	r = 0;
-	assert(printf("hello: %p\n", &r)
-		== ft_printf("hello: %p\n", &r));
+
+
+int	main(void)
+{	
+
+	void *ptr = NULL;
+	void *ptr2 = NULL;
+
+	ptr = ptr + LONG_MIN;
+	ptr2 = ptr2 + LONG_MAX;
+	//int j = printf(" %p %p \n", ptr, ptr2);
+	int i = ft_printf(" %p %p \n", ptr2);
+	(void)i;
+	//assert(i == j);
 	return (0);
 }
