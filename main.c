@@ -3,7 +3,7 @@
 int main()
 {
 
-    printf("voici : %+x", 10);
+    printf("voici : %#x", -10);
 
     return (0);
 }
