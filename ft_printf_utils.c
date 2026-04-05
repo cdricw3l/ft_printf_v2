@@ -6,7 +6,7 @@
 /*   By: cdric.b <cdric.b@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/11 23:33:19 by cdric.b           #+#    #+#             */
-/*   Updated: 2026/04/04 02:00:37 by cdric.b          ###   ########.fr       */
+/*   Updated: 2026/04/05 04:46:25 by cdric.b          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,6 +46,8 @@ void	ft_putptr_base(unsigned long nb, char *base, int fd, int *r)
 {
 	char	c;
 	size_t	len;
+
+	printf("voici la size de l'arg: %lu\n", sizeof(nb));
 
 	len = ft_strlen(base);
 	if (nb >= len)
